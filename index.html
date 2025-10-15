@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Locked Heart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="lock-screen" class="screen active">
+        <h1>For My Dearest <br>The Day You Said Yes</h1>
+        <div class="heart-lock-container">
+            
+            <div class="heart-lock">
+                <img src="heart.png" alt="Heart Shaped Lock" class="lock-image" id="lock-image">
+                
+                <div class="combo-dials">
+                    <input type="number" id="digit1" min="0" max="9" maxlength="1" oninput="this.value=this.value.slice(0,1)" required>
+                    <input type="number" id="digit2" min="0" max="9" maxlength="1" oninput="this.value=this.value.slice(0,1)" required>
+                    <input type="number" id="digit3" min="0" max="9" maxlength="1" oninput="this.value=this.value.slice(0,1)" required>
+                    <input type="number" id="digit4" min="0" max="9" maxlength="1" oninput="this.value=this.value.slice(0,1)" required>
+                </div>
+            </div>
+            
+            <button id="unlock-button">Unlock</button> 
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+:root {
+    --heart-color: #e74c3c; 
+    --shackle-color: #f1c40f; 
+    --background-color: #f5f5f5;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+/* --- Screen Transitions --- */
+.screen {
+    width: 100%;
+    height: 100vh;
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.screen.active {
+    display: flex;
+}
+
+/* --- Lock Screen Styling (Image Based) --- */
+
+/* --- H1 Title (For My Dearest) --- */
+#lock-screen h1 {
+    color: #6d0000;
+    margin-bottom: 40px;
+    font-size: 3em; /* Slightly increased size often helps script fonts look better */
+    
+    /* CRITICAL CHANGE: Apply the custom font */
+    font-family: 'Sacramento', cursive; 
+    font-weight: normal; /* Script fonts usually don't need bold */
+}
+
+.heart-lock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    margin-top: -100px;
+}
+
+.heart-lock {
+    /* Set up the container for the image and dials */
+    position: relative;
+    width: 350px; /* Adjust size based on your image */
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.lock-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Combination Dials positioned over the image */
+.combo-dials {
+    position: absolute;
+    top: 300px; /* Adjust this value to center inputs over the lock body in the image */
+    left: 50%;
+    transform: translateX(-50%); 
+    z-index: 5; 
+    display: flex;
+    gap: 8px;
+}
+
+.combo-dials input {
+    width: 35px; 
+    height: 45px;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Sacramento', cursive; 
+    font-size: 2em;
+    border: 3px solid var(--shackle-color);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    outline: none;
+    -moz-appearance: textfield; 
+}
+
+/* Hide arrows */
+.combo-dials input::-webkit-outer-spin-button,
+.combo-dials input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Unlock Button */
+#unlock-button {
+    margin-top: 30px; 
+    padding: 10px 20px;
+    font-size: 1em;
+    font-family: 'Sacramento', cursive; 
+    cursor: pointer;
+    background-color: var(--heart-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#unlock-button:hover {
+    background-color: #c0392b;
+}
+
+#message {
+    font-family: 'Sacramento', cursive; 
+    font-weight: bold;
+    margin-top: 15px;
+    min-height: 20px; 
+}

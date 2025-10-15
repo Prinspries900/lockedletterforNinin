@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Heart's True Content</title>
+    <style>
+        /* CSS is included here for simplicity, but you could move it to style.css */
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #fffaf0; /* Paper color */
+            color: #4a4a4a;
+            margin: 0;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* CRITICAL: Set position relative for button placement */
+            position: relative; 
+        }
+
+        .letter-design {
+            max-width: 700px;
+            padding: 40px;
+            border: 1px solid #e0c8a8;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            border-radius: 10px;
+            text-align: left;
+            line-height: 1.8;
+            position: relative; /* Ensure text flows correctly */
+        }
+        
+        /* New Button Styling (See Section 2) */
+        #extra-letter-button {
+            position: absolute;
+            top: 50px; /* Distance from the top of the body/viewport */
+            left: 50px; /* Distance from the left of the body/viewport */
+            padding: 10px 15px;
+            background-color: #791105;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 10; /* Ensure it's above other elements */
+            transition: background-color 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            font-size: 1em;
+            font-family: Arial, sans-serif;
+            transform: rotate(-5deg); /* A slight playful tilt */
+        }
+        
+        #extra-letter-button:hover {
+            background-color: #c0392b;
+            transform: rotate(0deg); /* Straightens on hover */
+        }
+
+        .letter-design h1 {
+            color: #a82e2e;
+            border-bottom: 2px dashed #e74c3c;
+            padding-bottom: 15px;
+            font-style: italic;
+        }
+
+        .date {
+            text-align: right;
+            margin-bottom: 30px;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        .signature {
+            text-align: right;
+            margin-top: 50px;
+            font-size: 1.2em;
+            font-style: italic;
+            color: #a82e2e;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="extra-letter-button">
+        Click for our Monthsarry!🫶
+    </button>
+
+    <div class="letter-design">
+        <p class="date">October 15, 2025</p>
+        <h1>My Dearest Lovey,</h1>
+        <p>
+            You did it Nin! You found the key to my heart. That simple combination, **1216**, represents a moment in time that means everything to me, t was the day you said yes to me lovey!! and now it grants you access to this space—a space dedicated entirely to you.
+        </p>
+        <p>
+            This website is my blank canvas, and I intend to fill it with all the beautiful designs and memories we share. Consider this the beginning of our private online album, a place where the design will evolve just like our love.
+        </p>
+        <p>
+            Thank you for taking the time to unlock this. Every effort you put into our relationship makes my heart swell.
+        </p>
+        <p class="signature">Forever Yours,<br>Your Lovey, Prince Aying</p>
+    </div>
+    
+    <script>
+        document.getElementById('extra-letter-button').onclick = function() {
+            // **CHANGE THIS LINK** to the name of your new HTML file or any other URL
+            window.location.href = 'monthsarrry_letter.html';
+        };
+    </script>
+</body>
+</html>
